@@ -1,6 +1,7 @@
 {
-  "latest": "1.15.2",
+  "latest": "1.16.1",
   "versions": {
+    "1.16.1": "https://papermc.io/ci/job/Paper-1.16/lastSuccessfulBuild/artifact/paperclip.jar",
     "1.15.2": "https://papermc.io/ci/job/Paper-1.15/lastSuccessfulBuild/artifact/paperclip.jar",
     "1.14.4": "https://papermc.io/ci/job/Paper-1.14/lastSuccessfulBuild/artifact/paperclip.jar",
     "1.13.2": "https://papermc.io/ci/job/Paper-1.13/lastSuccessfulBuild/artifact/paperclip.jar",
