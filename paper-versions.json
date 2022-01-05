@@ -1,6 +1,7 @@
 {
-  "latest": "1.18",
+  "latest": "1.18.1",
   "versions": {
+    "1.18.1": "https://papermc.io/api/v2/projects/paper/versions/1.18.1/builds/133/downloads/paper-1.18.1-133.jar",
     "1.18": "https://papermc.io/api/v2/projects/paper/versions/1.18/builds/66/downloads/paper-1.18-66.jar",
     "1.17.1": "https://papermc.io/api/v2/projects/paper/versions/1.17.1/builds/405/downloads/paper-1.17.1-405.jar",
     "1.17": "https://papermc.io/api/v2/projects/paper/versions/1.17/builds/79/downloads/paper-1.17-79.jar",
