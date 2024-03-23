@@ -57,7 +57,7 @@ jobs:
 
   deploy:
     needs: build
-    if: github.ref == 'refs/heads/master' && github.repository == 'qing762/paper-versions-links'
+    if: github.ref == 'refs/heads/master' && github.repository == 'qing762/paper-version-links'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
