@@ -13,10 +13,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v2
 
       - name: Set up Python 3.10
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v2
         with:
           python-version: "3.10"
 
@@ -35,7 +35,7 @@ jobs:
           python lib/validate.py paper-versions.json
 
       - name: Upload paper-versions.json
-        uses: actions/upload-artifact@v4.3.1
+        uses: actions/upload-artifact@v2
         with:
           name: paper-versions.json
           path: paper-versions.json
@@ -61,10 +61,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v2
 
       - name: Set up Python 3.10
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v2
         with:
           python-version: "3.10"
 
@@ -75,7 +75,7 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: Download paper-versions.json
-        uses: actions/download-artifact@v4.1.4
+        uses: actions/download-artifact@v2
         with:
           name: paper-versions.json
           path: .
