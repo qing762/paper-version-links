@@ -10,7 +10,7 @@ logging.basicConfig(level=logging.INFO)
 async def upload():
     url = os.environ.get("apiUploadURL", None)
     password = os.environ.get("apiUploadPASS", None)
-    
+
     async with aiofiles.open("paper-versions.json", "rb") as f:
         fileContent = await f.read()
 
