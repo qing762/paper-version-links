@@ -12,7 +12,7 @@ An API that is forked from [osipxd/Paper versions links](https://gist.github.com
 
 ## How it works
 
-It fetch the version & build number from [PaperMC API](https://api.papermc.io) and format it into a JSON format, same as [osipxd's Paper versions links](https://gist.github.com/osipxd/6119732e30059241c2192c4a8d2218d9) .
+It fetches the versions & build numbers available from [PaperMC API](https://api.papermc.io) and format it into a JSON format, same as [osipxd's Paper versions links](https://gist.github.com/osipxd/6119732e30059241c2192c4a8d2218d9) .
 
 
 ## API Reference
