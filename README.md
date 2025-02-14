@@ -3,11 +3,14 @@
 
 # Paper versions link
 
+JSON containing links to the all known [PaperMC](https://papermc.io/) versions.
+
 An API that is forked from [osipxd/Paper versions links](https://gist.github.com/osipxd/6119732e30059241c2192c4a8d2218d9) but it updates the JSON file with a script automatically.
 
 ## How it works
 
-It fetches the version & build number from [PaperMC API](https://api.papermc.io) and formats it into a JSON format, same as [osipxd's Paper versions links](https://gist.github.com/osipxd/6119732e30059241c2192c4a8d2218d9).
+It fetches the versions & build numbers available from [PaperMC API](https://api.papermc.io) and format it into a JSON format, same as [osipxd's Paper versions links](https://gist.github.com/osipxd/6119732e30059241c2192c4a8d2218d9) .
+
 
 ## API Reference
 
