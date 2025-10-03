@@ -9,24 +9,30 @@ class Main:
     async def main():
         async with aiohttp.ClientSession() as session:
             paperData = {}
+            versions = []
             async with session.get(
-                "https://api.papermc.io/v2/projects/paper",
+                "https://fill.papermc.io/v3/projects/paper",
                 headers={"accept": "application/json"},
             ) as response:
                 response = await response.json()
-                latestVersion = response["versions"][-1]
-                paperData["latest"] = latestVersion
+                for major, minor in response["versions"].items():
+                    versions.extend(minor)
+                paperData["latest"] = versions[0]
                 data = {}
-                for x in reversed(response["versions"]):
+                for x in versions:
                     async with session.get(
-                        f"https://api.papermc.io/v2/projects/paper/versions/{x}",
+                        f"https://fill.papermc.io/v3/projects/paper/versions/{x}",
                         headers={"accept": "application/json"},
                     ) as response:
                         response = await response.json()
-                        versionName = response["version"]
-                        latestBuildNumber = response["builds"][-1]
-                        latestBuildURL = f"https://api.papermc.io/v2/projects/paper/versions/{versionName}/builds/{latestBuildNumber}/downloads/paper-{versionName}-{latestBuildNumber}.jar"
-                        data[versionName] = latestBuildURL
+                        versionName = response["version"]["id"]
+                        latestBuildNumber = response["builds"][0]
+                        buildReq = await session.get(
+                            f"https://fill.papermc.io/v3/projects/paper/versions/{x}/builds/{latestBuildNumber}",
+                            headers={"accept": "application/json"},
+                        )
+                        res = await buildReq.json()
+                        data[versionName] = res["downloads"]["server:default"]["url"]
                 paperData["versions"] = data
                 return paperData
 
